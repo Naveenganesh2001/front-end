@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="./style.css">
+   
+    <title>Local Storage</title>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Name field must be filled ");
+    return false;
+  }
+  let y = document.forms["myForm"]["pho.no"].value;
+  if (y == "") {
+    alert("Number field must be filled ");
+    return false;
+  }
+  let z = document.forms["myForm"]["email"].value;
+  if (z == "") {
+    alert("email field must be filled ");
+    return false;
+  }
+  
+ 
+}
+
+
+</script>
+</head>
+<body>
+    <form id ="form"name="myForm"onsubmit="return validateForm()" method="post">
+        <h1> Login Page </h1>
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" name ="name" id="name">
+        </div>
+
+        <div>
+            <label for="pho.no">Phone number</label><br>
+            <input type="number" name ="pho.no" id="pho.no">
+        </div>
+
+        <div>
+            <label for="email">Email Id</label><br>
+            <input type="email" name ="email" id="email">
+        </div>
+
+        <div id = "button-row">
+            <div class="button">
+
+                <button type="submit" id="submit" onclick="window.location.href = 'page2.html';">Submit</button>
+            </div>
+        </div>
+
+    </form>
+    
+
+
+
+<script src="script.js"></script> 
+<script src="app.js"></script>
+<link rel="html"href="page2.html">
+</body>
+
+
+</html>
